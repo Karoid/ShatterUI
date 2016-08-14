@@ -1,0 +1,45 @@
+<!-- Shatter UI test html -->
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Shatter UI</title>
+  <script   src="https://code.jquery.com/jquery-3.1.0.slim.min.js"   integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="   crossorigin="anonymous"></script>
+  <script src="shatter-UI.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="shatter-UI.css">
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <div class="shatterbox">
+    <div class="tile form4-1"></div>
+    <div class="tile form4-1"></div>
+    <div class="tile form4-1"></div>
+    <div class="tile form4-1"></div>
+  </div>
+  <div class="shatterbox unseen">
+    <div class="tile form5-1"></div>
+    <div class="tile form5-1"></div>
+    <div class="tile form5-1"></div>
+    <div class="tile form5-1"></div>
+    <div class="tile form5-1"></div>
+  </div>
+  <div class="shatterbox unseen">
+    <div class="tile form4-2"></div>
+    <div class="tile form4-2"></div>
+    <div class="tile form4-2"></div>
+    <div class="tile form4-2"></div>
+    <div class="tile form4-2"></div>
+  </div>
+  <script>
+    var thisTable = new Shatter()
+    thisTable.nextpage(".form4-1:nth-of-type(odd)",".shatterbox:nth-of-type(2)")
+    thisTable.nextpage(".form5-1:nth-of-type(odd)",".shatterbox:nth-of-type(1)")
+    thisTable.nextpage(".form4-2:nth-of-type(odd)",".shatterbox:nth-of-type(1)")
+    thisTable.nextpage(".form4-1:nth-of-type(even)",".shatterbox:nth-of-type(3)")
+    thisTable.nextpage(".form5-1:nth-of-type(even)",".shatterbox:nth-of-type(3)")
+    thisTable.nextpage(".form4-2:nth-of-type(even)",".shatterbox:nth-of-type(2)")
+  </script>
+</body>
+</html>

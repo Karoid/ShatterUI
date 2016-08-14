@@ -1,0 +1,28 @@
+body{margin:0;overflow: hidden}
+.shatterbox{
+  width:100vw;
+  height: 100vh;
+  max-width: 56.25vh;
+  position:absolute;
+  -webkit-transition: top 1.5s; /* Safari */
+  transition: all 1.5s;
+}
+.shatterbox.unseen{
+  z-index: -1;
+}
+.shatterbox>.tile{
+  -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+  border: 10px solid white;
+  float:left;
+  -webkit-transition: margin 1.5s; /* Safari */
+  transition: margin 1.5s;
+}
+.shatterbox.unseen>.tile{margin-top:100vh;}
+@media screen and (min-aspect-ratio: 9/16) {
+  .shatterbox{
+      left:50%;
+      margin-left: -28.125vh;
+  }
+}
